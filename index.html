@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TOSHIリーグ 最小プロトタイプ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="card">
+      <div id="gameArea">
+        <div class="header">
+          <div class="stat">
+            <div class="stat-label">問題</div>
+            <div class="stat-value" id="questionCounter">1 / 5</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">残り時間</div>
+            <div class="stat-value" id="timer">20</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">あなた</div>
+            <div class="stat-value" id="playerScore">0</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">相手チーム</div>
+            <div class="stat-value" id="opponentScore">0</div>
+          </div>
+        </div>
+
+        <div class="question-box">
+          <div class="question-title" id="roundLabel">第1問</div>
+          <div class="question-text" id="questionText"></div>
+          <div class="hint">10個の中から正しいものを5つ選んでください。5つ選ぶと回答確定できます。</div>
+        </div>
+
+        <div class="choices" id="choices"></div>
+
+        <div class="footer">
+          <button class="primary" id="submitButton" disabled>回答確定</button>
+          <div class="message" id="message"></div>
+        </div>
+
+        <div class="result" id="resultBox">
+          <div id="resultTitle"></div>
+          <div class="explanation" id="explanation"></div>
+        </div>
+      </div>
+
+      <div class="end-screen" id="endScreen">
+        <div class="end-title">ゲーム終了</div>
+        <div class="end-summary" id="endSummary"></div>
+        <button class="primary" id="restartButtonEnd">もう一度遊ぶ</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay">
+    <div class="cutin">
+      <div class="cutin-small">SPECIAL CUT-IN</div>
+      <div class="cutin-title" id="cutinTitle">得点2倍チャンス</div>
+      <div class="cutin-text" id="cutinText">番組のノリで次の問題だけ得点が2倍になります。</div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
