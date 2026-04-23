@@ -1,3 +1,5 @@
+const bgm = document.getElementById("bgm");
+
 const questions = [
   {
     question: "次のうち、実在する株価指数を5つ選んでください",
