@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOSHIリーグ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section id="title-screen" class="screen active">
+      <div class="title-box pop-card">
+        <p class="show-label">投資クイズ頂上決戦</p>
+        <h1>TOSHIリーグ</h1>
+        <p class="title-copy">正確な知識で殴れ。演出はだいたい理不尽。</p>
+        <button id="start-button" class="main-button">開幕する</button>
+      </div>
+    </section>
+
+    <section id="game-screen" class="screen">
+      <header class="scoreboard">
+        <div class="hud-card hud-blue">
+          <span>問題</span>
+          <strong id="question-counter">1/5</strong>
+        </div>
+        <div class="hud-card hud-red">
+          <span>残り時間</span>
+          <strong id="timer" class="blink">20</strong>
+        </div>
+        <div class="hud-card hud-blue score-big">
+          <span>TOSHI</span>
+          <strong id="player-score">0</strong>
+        </div>
+        <div class="hud-card hud-red score-big">
+          <span>ライバル</span>
+          <strong id="opponent-score">0</strong>
+        </div>
+      </header>
+
+      <div id="bonus-banner" class="bonus-flag hidden">黄色速報：次の得点が2倍！！</div>
+
+      <section class="question-panel">
+        <p id="multiplier-status" class="show-label">通常得点</p>
+        <h2 id="question-text">問題文</h2>
+      </section>
+
+      <section id="choices" class="choices" aria-label="選択肢"></section>
+
+      <section id="result-panel" class="result-panel hidden">
+        <h3 id="result-title">RESULT</h3>
+        <p id="correct-count"></p>
+        <p id="earned-score"></p>
+        <p id="explanation"></p>
+        <button id="next-button" class="main-button">次の勝負へ</button>
+      </section>
+    </section>
+
+    <section id="end-screen" class="screen">
+      <div class="title-box pop-card">
+        <p class="show-label">最終結果</p>
+        <h2 id="final-result">RESULT</h2>
+        <p id="final-score-line"></p>
+        <p id="final-message"></p>
+        <button id="restart-button" class="main-button">もう一戦</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="cutin-backdrop" class="cutin-backdrop hidden"></div>
+  <div id="cutin" class="cutin hidden">得点2倍！！</div>
+
+  <audio id="bgm" src="bgm.mp3" loop></audio>
+  <script src="main.js"></script>
+</body>
+</html>
